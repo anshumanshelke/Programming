@@ -1,51 +1,39 @@
-/////////////////////////////////////////////////
-//
-// Accept Character from user and check whether it is alphabet or not
-// (A-Z a-z).
-// Input : F
-// Output : TRUE
-// Input : &
-// Output : FALSE
-//
-/////////////////////////////////////////////////
 #include<stdio.h>
 
 #define TRUE 1
 #define FALSE 0
 
 typedef int BOOL;
-
 BOOL ChkAlpha(char ch)
 {
-    BOOL flag = FALSE;
-
-    if((ch >= 56 && ch <= 90) || (ch >= 97 && ch <= 122)) 
+    if((ch>=97 && ch<=122) ||(ch>=65 && ch<=90))
     {
-    flag = TRUE;
+        return TRUE;
     }
-
-    return flag;
-
+    else
+    {
+        return FALSE;
+    }
 }
 
 int main()
 {
-    char cValue = '\0';
-    BOOL bRet = FALSE;
+    char cValue='\0';
+    BOOL bRet=FALSE;
 
-    printf("Enter the character :\n");
+    printf("Enter the character:");
     scanf("%c",&cValue);
 
-    bRet = ChkAlpha(cValue);
+    bRet=ChkAlpha(cValue);
 
-    if(bRet == TRUE)
+    if (bRet==TRUE)
     {
-        printf("It is Character");
+        printf("It is a Character");
     }
-
     else
     {
         printf("It is not a Character");
     }
+
     return 0;
 }

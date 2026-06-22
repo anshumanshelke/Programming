@@ -1,53 +1,39 @@
-///////////////////////////////////////////////////////////////////
-//
-// Accept Character from user and check whether it is small case or
-// not (a-z).
-// Input : g
-// Output : TRUE
-// Input : D
-// Output : FALSE
-//
-////////////////////////////////////////////////////////////////////
 #include<stdio.h>
 
 #define TRUE 1
 #define FALSE 0
 
 typedef int BOOL;
-
-BOOL ChkCapital(char ch)
+BOOL ChkSmall(char ch)
 {
-    BOOL flag = FALSE;
-
-    if(ch >= 97 && ch <= 122) 
-    {
-
-
-    flag = TRUE;
+    if(ch>=97 && ch<=122)   //AScii values
+    {                       // 97=a,122=z
+        return TRUE;
     }
-
-    return flag;
-
+    else
+    {
+        return FALSE;
+    }
 }
 
 int main()
 {
-    char cValue = '\0';
-    BOOL bRet = FALSE;
+    char cValue='\0';
+    BOOL bRet=FALSE;
 
-    printf("Enter the character :\n");
+    printf("Enter the character:");
     scanf("%c",&cValue);
 
-    bRet = ChkCapital(cValue);
+    bRet=ChkSmall(cValue);
 
-    if(bRet == TRUE)
+    if (bRet==TRUE)
     {
-        printf("TRUE");
+        printf("It is a Small Case Character");
     }
-
     else
     {
-        printf("FALSE");
+        printf("It is not a Small Case Character");
     }
+
     return 0;
 }

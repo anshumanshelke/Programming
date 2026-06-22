@@ -1,53 +1,39 @@
-/////////////////////////////////////////////////
-//
-// Accept Character from user and check whether it is capital or not
-// (A-Z).
-// Input : F
-// Output : TRUE
-// Input : d
-// Output : FALSE
-//
-/////////////////////////////////////////////////
 #include<stdio.h>
 
 #define TRUE 1
 #define FALSE 0
 
 typedef int BOOL;
-
 BOOL ChkCapital(char ch)
 {
-    BOOL flag = FALSE;
-
-    if((ch >= 65 && ch <= 90)) 
-    {
-
-
-    flag = TRUE;
+    if(ch>=65 && ch<=90)   //AScii values
+    {                     // 65=A,90=Z
+        return TRUE;
     }
-
-    return flag;
-
+    else
+    {
+        return FALSE;
+    }
 }
 
 int main()
 {
-    char cValue = '\0';
-    BOOL bRet = FALSE;
+    char cValue='\0';
+    BOOL bRet=FALSE;
 
-    printf("Enter the character :\n");
+    printf("Enter the character:");
     scanf("%c",&cValue);
 
-    bRet = ChkCapital(cValue);
+    bRet=ChkCapital(cValue);
 
-    if(bRet == TRUE)
+    if (bRet==TRUE)
     {
-        printf("TRUE");
+        printf("It is Capital Character");
     }
-
     else
     {
-        printf("FALSE");
+        printf("It is not Capital Character");
     }
+
     return 0;
 }
