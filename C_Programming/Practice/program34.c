@@ -1,29 +1,30 @@
-#include<stdio.h>
+#include<stdio.h>    
 
 void Display(int iNo)
 {
-    int iCnt = 0;
- 
-    // Filter
+    //FILTER 
     if(iNo < 0)
     {
-        printf("Invalid Input\n");
-        return;
+        printf("Invalid Input \n");
+        return ;
     }
-    
-    for(iCnt = iNo; iCnt >= 0; iCnt--)
+
+    int iCnt = 0;
+
+    for(iCnt = iNo; iCnt >= 0 ; iCnt--)
     {
-        printf("%d\n",iCnt);
+        printf("%d \n",iCnt);
     }
 }
 
 int main()
 {
+    
     int iValue = 0;
 
-    printf("Enter the frequency : ");
+    printf("Enter the frequency\n");
     scanf("%d",&iValue);
-    
+
     Display(iValue);
 
     return 0;
