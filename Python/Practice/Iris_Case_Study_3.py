@@ -1,3 +1,7 @@
+# we'll make use of the Built-in function- lein()
+# here, len() is a standalone function
+# means there's NO need to create an object of any identifer
+
 from sklearn.datasets import load_iris
 
 def main():
