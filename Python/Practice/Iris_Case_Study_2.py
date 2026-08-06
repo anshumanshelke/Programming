@@ -1,3 +1,8 @@
+# feature_names is an attribute of object named Dataset
+# since Dataset is a identifier to an object (python is object oriented lang)
+# feature_names - gives the shared independent variables names
+# target_names - gives the shared dependent variable names
+
 from sklearn.datasets import load_iris
 
 def main():
