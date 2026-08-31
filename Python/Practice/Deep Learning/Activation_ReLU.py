@@ -2,6 +2,8 @@ import numpy as np
 
 def ReLU(z):
     return max(0,z)
+    # in the ReLU(activation function)
+    # we will simply decide the max b/w 0 and the z
 
 def Marvellous_Neuron_Forward(inputs, weights, bias):
     print("Inputs are (X) : ",inputs)
