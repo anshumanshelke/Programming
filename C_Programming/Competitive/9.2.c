@@ -9,6 +9,8 @@ int CountOdd(int iNo)
     {
         iUnitPlace = iNo % 10;
         if(iUnitPlace % 2 != 0)
+            //here one more logic is applicable-
+            // where iUnitPlace % 2 > 0
         {
             iCnt++;
         }
