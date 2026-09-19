@@ -5,6 +5,8 @@
 # Output: 120
 #######################################################
 
+
+
 def ProductOfNo(No):
     Product = 1
     for i in range(1,(No+1)):
