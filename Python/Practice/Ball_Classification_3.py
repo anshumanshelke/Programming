@@ -18,5 +18,7 @@ def main():
 
     print("Dependent variables are : ",Dependent)
 
+# dunder of main starter- it's not sstandard python practice
+
 if __name__ == "__main__":
     main()
